@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "print-lab": {
+    "printlab": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -58,10 +58,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "print-lab:build:production"
+              "buildTarget": "printlab:build:production"
             },
             "development": {
-              "buildTarget": "print-lab:build:development"
+              "buildTarget": "printlab:build:development"
             }
           },
           "defaultConfiguration": "development"
