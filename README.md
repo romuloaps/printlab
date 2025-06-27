@@ -112,7 +112,11 @@ About validations, the suggestion is to use a Model Validation approach. It cons
 
 Soon
 
-## Development workflow
+## Development
+
+Notes about the development environment and workflow
+
+### Workflow
 
 The suggestion is to use the Pull Request workflow. To simplify the process, follow this guide: [Pull Request Workflow with Git — 6 steps guide](https://medium.com/@urna.hybesis/pull-request-workflow-with-git-6-steps-guide-3858e30b5fa4)
 
@@ -128,3 +132,13 @@ The suggestion is to use the Pull Request workflow. To simplify the process, fol
 Example: [Como criar Pull Requests no GitHub](https://www.youtube.com/watch?v=sXKZb37BRD8)
 
 For the commits, use [Convetional Commits](https://www.conventionalcommits.org).
+
+### Server
+
+The `Dockerfile`and `docker-compose.yml` files configure an instance of [json-server](https://github.com/typicode/json-server) to mock the API.
+In order to get it working must have a `.data` directory on project root with the json files to each case. For example:
+
+- clients.json
+- products.json
+
+The `Dockerfile` is ready to merge all these json files into only one, called `db.json` inside de container. The json server will serve this merged `db.json`.
