@@ -77,6 +77,22 @@ ng g c --type=layout component-name
 
 It can be used to better define the component.
 
+### Imports
+
+Paths configurations on `tsconfig.json` file to organize imports and avoid realtive paths:
+
+```json
+"paths": {
+  "@core/*": ["src/app/core/*"],
+  "@domain/*": ["src/app/domain/*"],
+  "@shared/*": ["src/app/shared/*"],
+  "@widget/*": ["src/app/widget/*"],
+  "@/*": ["./*"]
+}
+```
+
+`@/*` must be the last one because it is the most general.
+
 ## Architecture
 
 About Angular components, it is recommended to use the Template Driven style instead of Reactive Forms. For more information, see these links below:
