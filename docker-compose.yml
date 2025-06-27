@@ -1,0 +1,9 @@
+name: printlab
+
+services:
+  json-server:
+    build: .
+    container_name: printlab-api
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
