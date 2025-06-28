@@ -123,9 +123,8 @@ The suggestion is to use the Pull Request workflow. To simplify the process, fol
 0. “Pull” the changes to your local machine (get the most recent base)
 1. Create a “branch” (version)
 2. Commit the changes
-3.a Push your changes
-3.b Open a “pull request” (propose changes)
-4. Discuss and review your code
+3. Push your changes
+4. Open a “pull request” (propose changes)
 5. Rebase and tests
 6. “Merge” your branch to the master branch
 
