@@ -37,6 +37,22 @@
           }
         }
       }
+    },
+    {
+      "label": "Test Current File (Angular)",
+      "type": "npm",
+      "script": "testf",
+      "problemMatcher": [],
+      "group": "test",
+      "options": {
+        "env": {
+          "TEST_FILE_PATH": "${relativeFile}"
+        }
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
     }
   ]
 }
