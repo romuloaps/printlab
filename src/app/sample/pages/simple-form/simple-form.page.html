@@ -1,0 +1,27 @@
+<h2>Simple form</h2>
+<p>Demonstration on how to implement Template Driven with signals - simplest way</p>
+
+<form #form="ngForm"
+  (formValueChange)="formValue.set($event)"
+  (formDirtyChange)="formDirty.set($event)">
+
+  <div>
+    <label>
+      <span>First name:</span>
+      <input type="text" [ngModel]="formValue().firstName" name="firstName"/>
+    </label>
+  </div>
+
+  <div>
+    <label>
+      <span>Last name:</span>
+      <input type="text" [ngModel]="formValue().lastName" name="lastName"/>
+    </label>
+  </div>
+
+  <p>Dados do form:</p>
+  <p>Model values: {{ formValue() | json }} - Signal dirty: {{ formDirty() }}</p>
+  <p>Form values: {{ form.value | json }}</p>
+  <p>Form status: {{ form.status }}, dirty: {{ form.dirty }}</p>
+
+</form>
