@@ -102,7 +102,9 @@ About Angular components, it is recommended to use the Template Driven style ins
 - [Mastering complex reactivity with template-driven forms and Signals by Brecht Billiet](https://www.youtube.com/watch?v=2PGKQHiGyio)
 - [Why It’s Time to Say Goodbye to Angular Template-Driven Forms](https://medium.com/netanelbasal/why-its-time-to-say-goodbye-to-angular-template-driven-forms-350c11d004b): see the first comment of Ward Bell.
 
-About validations, the suggestion is to use a Model Validation approach. It consists in decouple the validation from the framework and focus on the business rules and it is done using [Vest library](https://vestjs.dev/). For more information, see these links below:
+**Besides, and most important:** use signal based forms. For now, it is still a [prototype](https://github.com/angular/angular/tree/prototype/signal-forms/packages/forms/experimental), but soon it should became official and it is possible to use today's signal system. See more on *Implementation* section.
+
+About validations, the suggestion is to use a Model Validation approach. It consists in decouple the validation from the framework and focus on the business rules. It is done using [Vest library](https://vestjs.dev/). For more information, see these links below:
 
 - [Form Validation Done Right | Ward Bell | ng-cof 2022](https://www.youtube.com/watch?v=EMUAtQlh9Ko)
 - [Mastering complex reactivity with template-driven forms and Signals by Brecht Billiet](https://www.youtube.com/watch?v=2PGKQHiGyio): second part
@@ -110,7 +112,17 @@ About validations, the suggestion is to use a Model Validation approach. It cons
 
 ### Implementation
 
-Soon
+Guide lines on how to best (or trying to be the best) coding according to the proposed archtecture.
+
+See some samples in `sample` directory.
+
+#### Forms
+
+Template Driven forms over Reactive forms using signal approach to achieve reactivity. See [Mastering complex reactivity with template-driven forms and Signals by Brecht Billiet](https://www.youtube.com/watch?v=2PGKQHiGyio) first part.
+
+To accomplish that, there is needed for some infrastructure:
+
+- Form directive: to emmit the form value change event. It will be captured by the signal in the component. See `@core/directives/form.directive.ts`.
 
 ## Development
 
